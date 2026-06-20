@@ -112,31 +112,34 @@ docker exec -it kafka bash
 ### Create Topic
 
 ```bash
-kafka-topics.sh --create \
---topic learning-topic \
---bootstrap-server localhost:9092
+/opt/kafka/bin/kafka-topics.sh \
+  --create \
+  --topic messages-topic \
+  --bootstrap-server localhost:9092
 ```
 
 ### List Topics
 
 ```bash
-kafka-topics.sh --list \
---bootstrap-server localhost:9092
+/opt/kafka/bin/kafka-topics.sh \
+  --list \
+  --bootstrap-server localhost:9092
 ```
 
 ### Describe Topic
 
 ```bash
-kafka-topics.sh --describe \
---topic learning-topic \
---bootstrap-server localhost:9092
+/opt/kafka/bin/kafka-topics.sh \
+  --describe \
+  --topic messages-topic \
+  --bootstrap-server localhost:9092
 ```
 
 ### Produce Messages
 
 ```bash
 kafka-console-producer.sh \
---topic learning-topic \
+--topic messages-topic \
 --bootstrap-server localhost:9092
 ```
 
@@ -144,7 +147,7 @@ kafka-console-producer.sh \
 
 ```bash
 kafka-console-consumer.sh \
---topic learning-topic \
+--topic messages-topic \
 --bootstrap-server localhost:9092 \
 --from-beginning
 ```
@@ -152,9 +155,10 @@ kafka-console-consumer.sh \
 ### Delete Topic
 
 ```bash
-kafka-topics.sh --delete \
---topic learning-topic \
---bootstrap-server localhost:9092
+/opt/kafka/bin/kafka-topics.sh \
+  --delete \
+  --topic messages-topic \
+  --bootstrap-server localhost:9092
 ```
 
 ### Exit Container
