@@ -1,5 +1,7 @@
 # Kafka + Kafka UI (Docker)
 
+###### * Note: This project was developed and tested on a Mac with Apple Silicon. Developers on Intel-based Macs or Windows may need to make minor adjustments.
+
 ## One-Time Setup (First Time Only)
 
 Run this when you clone/download the project for the first time.
